@@ -130,16 +130,23 @@
         </fieldset>
 
         <div class="if-yes" id="if-yes" hidden>
-          <div class="field">
-            <label for="guests">Number of guests (including you)</label>
-            <select id="guests" name="guests">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
+          <fieldset class="field">
+            <legend>Companions <small>(if anyone is coming with you)</small></legend>
+            <ul class="companions" id="companions"></ul>
+            <button type="button" class="btn-add" id="add-companion">＋ Add companion</button>
+            <p class="hint" id="companion-hint">You can add up to 4 companions.</p>
+          </fieldset>
+
+          <template id="companion-row">
+            <li class="companion">
+              <input type="text" class="c-name" maxlength="100" placeholder="Companion's full name" aria-label="Companion's full name" />
+              <div class="c-type" role="radiogroup" aria-label="Adult or child">
+                <label><input type="radio" value="Adult" checked /><span>Adult</span></label>
+                <label><input type="radio" value="Child" /><span>Child</span></label>
+              </div>
+              <button type="button" class="c-remove" aria-label="Remove companion">✕</button>
+            </li>
+          </template>
 
           <fieldset class="field">
             <legend>Which will you attend?</legend>

@@ -9,7 +9,7 @@
  */
 
 const SHEET_NAME = "RSVP";
-const HEADERS = ["Timestamp", "Name", "Attending", "Guests", "Event", "Contact", "Message"];
+const HEADERS = ["Timestamp", "Name", "Attending", "Total Guests", "Adults", "Children", "Companions", "Event", "Contact", "Message"];
 
 // Optional: put your email here to get notified on every RSVP (leave "" to disable)
 const NOTIFY_EMAIL = "";
@@ -26,6 +26,9 @@ function doPost(e) {
       clean_(p.name),
       clean_(p.attending),
       Number(p.guests) || 0,
+      Number(p.adults) || 0,
+      Number(p.children) || 0,
+      clean_(p.companions),
       clean_(p.event),
       clean_(p.contact),
       clean_(p.message),

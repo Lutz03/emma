@@ -304,6 +304,67 @@ input.invalid, .choices.invalid .choice span { border-color: #d9534f; }
 .choice input:checked + span { background: var(--pink-soft); border-color: var(--pink); color: var(--pink-dark); }
 .choice input:focus-visible + span { outline: 3px solid var(--lilac); outline-offset: 2px; }
 
+/* Companions */
+.companions { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.companions:not(:empty) { margin-bottom: 10px; }
+.companion {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "name remove" "type type";
+  gap: 8px;
+  background: var(--pink-soft);
+  border-radius: 16px;
+  padding: 10px;
+  animation: rise 0.3s ease both;
+}
+@media (min-width: 600px) {
+  .companion { grid-template-columns: 1fr auto auto; grid-template-areas: "name type remove"; align-items: center; }
+}
+.c-name { grid-area: name; }
+.c-name.invalid { border-color: #d9534f; }
+.c-type { grid-area: type; display: flex; gap: 6px; }
+.c-type label { flex: 1; cursor: pointer; }
+.c-type input { position: absolute; opacity: 0; pointer-events: none; }
+.c-type span {
+  display: block;
+  text-align: center;
+  padding: 9px 14px;
+  border: 2px solid #f1d3da;
+  border-radius: 12px;
+  background: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.c-type input:checked + span { background: var(--pink); border-color: var(--pink); color: #fff; }
+.c-type input:focus-visible + span { outline: 3px solid var(--lilac); outline-offset: 2px; }
+.c-remove {
+  grid-area: remove;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--pink-dark);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.c-remove:hover { background: var(--pink); color: #fff; }
+.btn-add {
+  font: inherit;
+  font-weight: 700;
+  color: var(--pink-dark);
+  background: #fff;
+  border: 2px dashed var(--pink);
+  border-radius: 14px;
+  padding: 10px 16px;
+  width: 100%;
+  min-height: 46px;
+  cursor: pointer;
+}
+.btn-add:hover { background: var(--pink-soft); }
+.btn-add[hidden] { display: none; }
+.hint { font-size: 0.82rem; color: var(--muted); margin-top: 6px; }
+
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 .error {
