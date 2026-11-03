@@ -1,5 +1,5 @@
 // 👉 Paste your Google Apps Script Web App URL here (see README.md)
-const SCRIPT_URL = "PASTE_YOUR_WEB_APP_URL_HERE";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxHCeW6qrcsZtT4atWMC3WLkZEBEeuzwVz5sClA338P-PrDxotnfVIwrxI-mjRK1w57yQ/exec";
 
 // Party date: Church starts 7:30 AM Philippine time (UTC+8)
 const PARTY_DATE = new Date("2026-11-28T07:30:00+08:00");
