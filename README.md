@@ -45,6 +45,13 @@ Then on GitHub, go to **Settings → Pages → Build and deployment**, set **Sou
 
 After about a minute your site will be live at `https://<your-username>.github.io/emma-rsvp/`.
 
+## 3. Messenger / Facebook link preview
+1. In `index.html`, replace both `YOUR-SITE-URL` with your site address **ending in `/`**,
+   e.g. `https://username.github.io/emma-rsvp/` (so the image becomes `https://username.github.io/emma-rsvp/images/share.jpg`).
+2. Push to GitHub and wait a minute.
+3. Go to https://developers.facebook.com/tools/debug/, paste your site link, and click **Debug**, then **Scrape Again**.
+   This refreshes the preview Messenger shows.
+
 ## Test it locally
 Run `python -m http.server` in this folder and go to http://localhost:8000.
 (Double-clicking `index.html` works too, but the 3D bunny only shows when served, as on GitHub Pages.)
