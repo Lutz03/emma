@@ -260,7 +260,6 @@ h1 { line-height: 1.1; }
   margin-bottom: 4px;
 }
 .products strong { font-size: 0.74rem; line-height: 1.25; color: var(--text); }
-.products span { font-size: 0.7rem; color: var(--muted); }
 
 /* ---------- RSVP ---------- */
 .rsvp h2 { font-size: clamp(2.2rem, 10vw, 2.8rem); text-align: center; line-height: 1.2; }
