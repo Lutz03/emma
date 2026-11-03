@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emma is Turning 1 · RSVP</title>
+  <meta name="description" content="Join us in celebrating Emma's 1st birthday on November 28. Kindly RSVP." />
+  <meta name="theme-color" content="#f7c6d0" />
+  <meta property="og:title" content="Emma is Turning 1!" />
+  <meta property="og:description" content="November 28 · Kindly RSVP" />
+  <meta property="og:image" content="images/emma.webp" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎀</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero card">
+      <p class="eyebrow">You're invited to celebrate</p>
+      <div class="photo-wrap">
+        <img src="images/emma.webp" alt="Baby Emma in a pink floral dress" width="800" height="890" />
+      </div>
+      <h1><span class="name">Emma</span><span class="turning">is turning <span class="one">1</span></span></h1>
+      <p class="date">Saturday · November 28, 2026</p>
+
+      <div class="bunny" id="bunny" role="img" aria-label="A bunny ballerina in a pink tutu dancing a pirouette"></div>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div><span id="cd-days">--</span><small>Days</small></div>
+        <div><span id="cd-hours">--</span><small>Hours</small></div>
+        <div><span id="cd-mins">--</span><small>Mins</small></div>
+        <div><span id="cd-secs">--</span><small>Secs</small></div>
+      </div>
+
+      <a href="#rsvp" class="btn">RSVP Now</a>
+    </section>
+
+    <!-- EVENT DETAILS -->
+    <section class="details">
+      <article class="card event">
+        <div class="icon" aria-hidden="true">⛪</div>
+        <h2>Church</h2>
+        <p class="place">Shrine of St. Therese<br />of the Child Jesus</p>
+        <p class="time">7:30 AM</p>
+        <a class="btn btn-outline" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Shrine+of+St.+Therese+of+the+Child+Jesus+Pasay">
+          Open in Maps
+        </a>
+      </article>
+
+      <article class="card event">
+        <div class="icon" aria-hidden="true">🎈</div>
+        <h2>Reception</h2>
+        <p class="place">Villamor Air Base<br />Golf Clubhouse</p>
+        <p class="time">10:00 AM</p>
+        <a class="btn btn-outline" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Villamor+Air+Base+Golf+Clubhouse">
+          Open in Maps
+        </a>
+      </article>
+    </section>
+
+    <!-- RSVP -->
+    <section class="card rsvp" id="rsvp">
+      <h2 class="script">Kindly RSVP</h2>
+      <p class="sub">Please respond by <strong>November 20, 2026</strong></p>
+
+      <form id="rsvp-form" novalidate>
+        <div class="field">
+          <label for="name">Full Name <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Juan Dela Cruz" />
+        </div>
+
+        <fieldset class="field">
+          <legend>Will you attend? <span aria-hidden="true">*</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="attending" value="Yes" required /><span>Will attend 💕</span></label>
+            <label class="choice"><input type="radio" name="attending" value="No" /><span>Can't attend</span></label>
+          </div>
+        </fieldset>
+
+        <div class="if-yes" id="if-yes" hidden>
+          <div class="field">
+            <label for="guests">Number of guests (including you)</label>
+            <select id="guests" name="guests">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <fieldset class="field">
+            <legend>Which will you attend?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="event" value="Both" checked /><span>Both</span></label>
+              <label class="choice"><input type="radio" name="event" value="Church" /><span>Church only</span></label>
+              <label class="choice"><input type="radio" name="event" value="Reception" /><span>Reception only</span></label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="field">
+          <label for="contact">Contact Number <small>(optional)</small></label>
+          <input id="contact" name="contact" type="tel" autocomplete="tel" maxlength="20" placeholder="09XX XXX XXXX" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message for Emma <small>(optional)</small></label>
+          <textarea id="message" name="message" rows="3" maxlength="500" placeholder="Happy 1st birthday, Emma!"></textarea>
+        </div>
+
+        <!-- honeypot: bots fill this, humans don't see it -->
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <p class="error" id="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn-full" id="submit-btn">Send RSVP</button>
+      </form>
+
+      <div class="thanks" id="thanks" hidden>
+        <div class="heart" aria-hidden="true">💗</div>
+        <h3 class="script">Thank you!</h3>
+        <p id="thanks-msg">Your RSVP has been received.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p class="script">We can't wait to celebrate with you!</p>
+      <p class="small">With love, Emma's family</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script type="module" src="bunny.js"></script>
+</body>
+</html>
