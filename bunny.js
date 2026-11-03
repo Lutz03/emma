@@ -18,8 +18,8 @@ function init(box) {
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(28, 1, 0.1, 50);
-  camera.position.set(0, 2.1, 10);
-  camera.lookAt(0, 1.75, 0);
+  camera.position.set(0, 2.05, 8.6);
+  camera.lookAt(0, 1.9, 0);
 
   scene.add(new THREE.HemisphereLight(0xffffff, 0xf3c4d0, 1.6));
   const sun = new THREE.DirectionalLight(0xffffff, 1.6);
