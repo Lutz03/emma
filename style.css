@@ -445,6 +445,26 @@ footer {
 footer .script { font-size: 1.6rem; }
 footer .small { color: var(--muted); font-size: 0.9rem; }
 
+/* ---------- MUSIC BUTTON ---------- */
+.music-btn {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow);
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.music-btn:hover { transform: scale(1.06); }
+.music-btn:focus-visible { outline: 3px solid var(--lilac); outline-offset: 3px; }
+.music-btn.on { background: var(--pink-soft); animation: beat 2.4s ease-in-out infinite; }
+
 /* ---------- ANIMATIONS ---------- */
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 @keyframes beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
