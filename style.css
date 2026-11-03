@@ -183,6 +183,59 @@ h1 { line-height: 1.1; }
 .event .time { font-size: 1.3rem; font-weight: 700; color: var(--pink-dark); margin: 4px 0 10px; }
 .event .btn { margin-top: auto; }
 
+/* ---------- DRESS CODE ---------- */
+.dress-grid { display: grid; gap: 14px; margin-top: 14px; }
+@media (min-width: 600px) {
+  .dress-grid { grid-template-columns: 3fr 2fr; }
+}
+.dress-panel {
+  background: var(--pink-soft);
+  border-radius: 18px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dress-panel h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.dress-panel p { margin: 6px 0 14px; }
+.dress-panel strong { color: var(--pink-dark); }
+.godparents { background: #fffaf7; border: 2px solid #f1e4dc; }
+.godparents strong { color: var(--text); }
+
+.swatches {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 8px;
+  margin-top: auto;
+}
+.swatches li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--muted);
+  width: 48px;
+}
+.swatch {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 8px rgba(201, 86, 110, 0.18);
+}
+.swatch-lg { width: 54px; height: 54px; }
+.swatch-white { background: #fff; border-color: #eadfd8; }
+
 /* ---------- GIFT IDEAS / HEALTH PROTOCOLS ---------- */
 .info { text-align: center; }
 .info h2 { font-size: clamp(2.2rem, 10vw, 2.8rem); line-height: 1.2; }
